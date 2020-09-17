@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\DropDownWithSearch;
+use App\Http\Livewire\About;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@ use App\Http\Livewire\DropDownWithSearch;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); })->name('home');
+
+Route::get('/about', About::class)->name('about');
 
 Route::get('/test', DropDownWithSearch::class);
 
