@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\DropDownWithSearch;
 use App\Http\Livewire\About;
+use App\Http\Livewire\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Livewire\About;
 Route::get('/', function () { return view('welcome'); })->name('home');
 
 Route::get('/about', About::class)->name('about');
+Route::get('/contact', Contact::class)->name('contact');
 
 Route::get('/test', DropDownWithSearch::class);
 
